@@ -1,0 +1,38 @@
+Moderating variable: None mentioned in the research title
+1. True - The statements are related to a specific study and the variables mentioned are part of the research hypothesis and methodology.
+2. True - The statements are describing the variables, relationships, and modulating factors in the research study, which overall provide an overview of the research framework.
+1. Yes
+2. Yes
+1. T
+2. T
+3. C
+4. T
+5. C
+6. T
+7. C
+8. T
+9. T
+10. T
+11. T
+12. T
+13. T
+14. C
+15. T
+1. C   2. T   3. C   4. T   5. C   6. T   7. C   8. T   9. T   10. T   11. C   12. C   13. T   14. C   15. T
+1. C (Conceptual)
+2. T (Theoretical)
+3. T (Theoretical)
+4. T (Theoretical)
+5. C (Conceptual)
+6. T (Theoretical)
+7. C (Conceptual)
+8. T (Theoretical)
+9. C (Conceptual)
+10. T (Theoretical)
+11. T (Theoretical)
+12. C (Conceptual)
+13. T (Theoretical)
+14. C (Conceptual)
+15. T (Theoretical)
+
+Yes - all statements are either true to both conceptual and theoretical framework or true to only one of them.
