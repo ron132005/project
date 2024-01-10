@@ -1,5 +1,5 @@
 // import dependencies
-const { Configuration, OpenAIApi } = require("openai");
+const OpenAI = require("openai");
 const fs = require("fs");
 const path = require("path");
 
@@ -13,11 +13,10 @@ if (fs.existsSync(filepath)) {
 const apikey = JSON.parse(fs.readFileSync(filepath, "utf8"));
 
 // configure OpenAI API
-const configuration = new Configuration({
+const openai = new OpenAI({
   apiKey: apikey.openai,
   username: apikey.username,
 });
-const openai = new OpenAIApi(configuration);
 
 async function loadNextThreadHistory(api, event, chatHistory, timestamp) {
   const messagesPerPage = 50;
@@ -113,7 +112,7 @@ module.exports = async (api, event) => {
     // Log the historyMessages array
     api.sendTypingIndicator(event.threadID);
     // get response from OpenAI API
-    const response = await openai.createChatCompletion({
+    const response = await openai.chat.completions.create({
       model: "gpt-3.5-turbo-0301",
       max_tokens: 400,
       messages: [...historyMessages, { role: "user", content: event.body }],
@@ -144,7 +143,7 @@ module.exports = async (api, event) => {
         api.sendTypingIndicator(event.threadID);
         api.sendMessage(
           {
-            body: `Hi @${senderName}! ${response.data.choices[0].message.content} \n \n About this bot, type:\n👉/help for more info`,
+            body: `Hi @${senderName}! ${response.choices[0].message.content} \n \n About this bot, type:\n👉/help for more info`,
             mentions: [{ tag: `@${senderName}`, id: event.senderID }],
           },
           event.threadID,

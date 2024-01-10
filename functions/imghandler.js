@@ -1,14 +1,13 @@
-const { Configuration, OpenAIApi } = require("openai");
+const OpenAI = require("openai");
 const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
 const filepath = path.join(__dirname, "..", "api_key.json");
 const apikey = JSON.parse(fs.readFileSync(filepath, "utf8"));
-const configuration = new Configuration({
+const openai = new OpenAI({
   apiKey: apikey.openai,
   username: apikey.username,
 });
-const openai = new OpenAIApi(configuration);
 
 module.exports = async (api, event) => {
   try {
@@ -26,7 +25,7 @@ module.exports = async (api, event) => {
 
       return;
     }
-    const response = await openai.createImage({
+    const response = await openai.images.generate({
       prompt: event.body,
       n: 1,
       size: "1024x1024",

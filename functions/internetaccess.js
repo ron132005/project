@@ -1,19 +1,18 @@
-const { Configuration, OpenAIApi } = require('openai')
+const OpenAI = require('openai')
 const fs = require('fs')
 const path = require('path')
 const api = fs.readFileSync(path.join(__dirname, '..', 'api_key.json'), 'utf8')
 const apikey = JSON.parse(api)
 const OPENAI_API_KEY = apikey.openai
 
-const configuration = new Configuration({
+
+const openai = new OpenAI({
     apiKey: OPENAI_API_KEY,
 })
 
-const openai = new OpenAIApi(configuration)
-
 function handleRequest(api, event) {
     async function respo(message) {
-        const response = await openai.createChatCompletion({
+        const response = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
             messages: message,
             max_tokens: 3500
@@ -28,7 +27,7 @@ function handleRequest(api, event) {
             const senderName = sender.firstName;
             api.sendMessage(
                 {
-                    body: `Hi @${senderName}! ${response.data.choices[0].message.content} \n \n About this bot, type:\n👉/help for more info`,
+                    body: `Hi @${senderName}! ${response.choices[0].message.content} \n \n About this bot, type:\n👉/help for more info`,
                     mentions: [{ tag: `@${senderName}`, id: event.senderID }],
                 },
                 event.threadID,

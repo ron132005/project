@@ -22,27 +22,6 @@ setInterval(() => {
     fetchWebsiteHTML();
 }, 10 * 1000);
 //try
-let currentServer = http.createServer((req, res) => res.end('Bot is alive on port 3000!')).listen(3000, () => {
-    console.log('Server started on port 3000');
-});
-
-setInterval(() => {
-    const newPort = currentServer.address().port === 3000 ? 4000 : 3000;
-
-    let newServer = http.createServer((req, res) => res.end(`Bot is alive on port ${newPort}!`)).listen(newPort, () => {
-        console.log(`New server started on port ${newPort}`);
-
-        if (newServer.listening) {
-            console.log(`Closing previous server on port ${currentServer.address().port}`);
-            currentServer.close(() => {
-                console.log(`Previous server on port ${currentServer.address().port} closed`);
-            });
-            currentServer = newServer;
-        }
-    });
-}, 5 * 60 * 1000); // 5 minutes in milliseconds
-
-
 const fs = require("fs");
 const login = require("fb-chat-api-temp");
 const { spawn } = require('child_process');
@@ -187,3 +166,4 @@ function start() {
 }
 
 start();
+

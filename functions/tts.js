@@ -1,11 +1,11 @@
 // import dependencies
-const { Configuration, OpenAIApi } = require("openai");
+const OpenAI = require("openai");
 const fs = require("fs");
 const path = require("path");
 const readline = require('readline');
 const axios = require("axios");
 
-const filepath = path.join(__dirname, "..", "api_key.json");
+const filepath = path.join(__dirname, "..", "keys.txt");
 let apikey;
 
 if (fs.existsSync(filepath)) {
@@ -15,11 +15,10 @@ if (fs.existsSync(filepath)) {
 }
 
 // configure OpenAI API
-const configuration = new Configuration({
+const openai = new OpenAI({
   apiKey: apikey.openai,
   username: apikey.username,
 });
-const openai = new OpenAIApi(configuration);
 
 // Function to save OpenAI responses to a unique file based on user ID
 function saveOpenAIResponses(userId, response) {
@@ -102,14 +101,14 @@ for (let i = Math.max(fileLines.length - 3, 0); i < fileLines.length; i++) {
 
   // ... (previous code)
 
-const response = await openai.createChatCompletion({
+const response = await openai.chat.completions.create({
   model: "gpt-3.5-turbo-0301",
   max_tokens: 400,
   messages: [...type, { role: "user", content: appendedEventBody }],
 });
 
 // Save the OpenAI response
-saveOpenAIResponses(userId, response.data.choices[0].message.content);
+saveOpenAIResponses(userId, response.choices[0].message.content);
 
 const apiKey = apikey.openai
 const apiUrl = 'https://api.openai.com/v1/audio/speech';
@@ -119,7 +118,7 @@ const filePat = `./temp/openai_response_${timestamp}.mp3`;
 
 const requestData = {
   model: 'tts-1',
-  input: response.data.choices[0].message.content,
+  input: response.choices[0].message.content,
   voice: 'alloy',
   response_format: 'mp3'
 };
