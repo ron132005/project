@@ -7,7 +7,7 @@ let server = http.createServer((req, res) => res.end('Bot is alive on port 8080!
 
 async function fetchWebsiteHTML() {
     try {
-        const response = await axios.get('https://66f28d50-5787-4d3b-a180-15567d366812-00-39smnetq9fsz1.janeway.replit.dev/');
+        const response = await axios.get('https://8080-ron132005-jarvis-i8rzpjcj7o7.ws-us107.gitpod.io');
         const html = response.data;
 
         // Perform actions with the fetched HTML content here
