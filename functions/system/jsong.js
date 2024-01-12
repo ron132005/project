@@ -6,7 +6,7 @@ const axios = require("axios");
 const downloadSong = async (videoId, filePath) => {
 
   const videoInfo = await ytdl.getInfo(videoId);
-  const downloadStream = ytdl(videoId, { quality: 'highestaudio' });
+  const downloadStream = ytdl(videoId, { quality: 'lowestaudio' });
 
   const writer = fs.createWriteStream(filePath);
   downloadStream.pipe(writer);
@@ -35,17 +35,15 @@ const searchAndDownloadSong = async (songQuery) => {
   return { filePath, videoTitle: title, channelName: author.name };
 };
 
-module.exports = async (api, event) => {
-  const songQuery = event.body;
+module.exports = async (api, event, extractedSongName) => {
+  const songQuery = extractedSongName;
 
   if (!songQuery) {
-    api.sendMessage("🔃 𝗘𝗻𝘁𝗲𝗿 𝘆𝗼𝘂𝗿 𝗾𝘂𝗲𝗿𝘆.", event.threadID, event.messageID);
+    api.sendMessage("❌ An error occured: Executed song.js through [12345-SONGNAME].", event.threadID, event.messageID);
     return;
   }
 
   try {
-    api.sendMessage("🔍 𝗦𝗲𝗮𝗿𝗰𝗵𝗶𝗻𝗴 𝘀𝗼𝗻𝗴...", event.threadID, event.messageID);
-
     const { filePath, videoTitle, channelName } = await searchAndDownloadSong(songQuery);
 
     const stream = fs.createReadStream(filePath);

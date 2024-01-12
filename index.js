@@ -1,26 +1,6 @@
 const http = require('http');
 const axios = require('axios');
 //try
-let server = http.createServer((req, res) => res.end('Bot is alive on port 8080!')).listen(8080, () => {
-    console.log('Server started on port 8000');
-});
-
-async function fetchWebsiteHTML() {
-    try {
-        const response = await axios.get('https://8080-ron132005-jarvis-i8rzpjcj7o7.ws-us107.gitpod.io');
-        const html = response.data;
-
-        // Perform actions with the fetched HTML content here
-        // For demonstration purposes, log the HTML content
-        console.log('Fetched HTML:', html.substring(0, 200) + '... (truncated for brevity)');
-    } catch (error) {
-        console.error('Error:', error.message);
-    }
-}
-
-setInterval(() => {
-    fetchWebsiteHTML();
-}, 10 * 1000);
 //try
 const fs = require("fs");
 const login = require("fb-chat-api-temp");
@@ -30,8 +10,6 @@ const loginCred = {
   appState: JSON.parse(fs.readFileSync("session.json", "utf-8")),
 };
 
-const loginCredEP = {email: "wixitix741@tenjb.com", password: "Arlott2005"
-}
     // Here you can use the api             
 let running = false;
 let stopListener = null;
@@ -122,7 +100,7 @@ function startListener(api, event) {
             require("./functions/tts.js")(api, event)
           }
           
-          if (event.body.includes("•pokemon")) { require("./functions/pokemontwo.js")(api, event);
+          if (event.body.includes("•pokemon")) { require("./functions/pokemon.js")(api, event);
           }
           if (event.body.includes("•meme")) { require("./functions/meme.js")(api, event);
                                                }
@@ -135,7 +113,7 @@ function startListener(api, event) {
 
           //trial0
 
-          if (event.body === "/â€¢help") {
+          if (event.body === "•//help") {
             startMessage(api, event);
           } 
         } catch (error) {
@@ -166,4 +144,3 @@ function start() {
 }
 
 start();
-

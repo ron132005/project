@@ -5,7 +5,7 @@ const path = require("path");
 const readline = require('readline');
 const axios = require("axios");
 
-const filepath = path.join(__dirname, "..", "keys.txt");
+const filepath = path.join(__dirname, "..", "api_key.json");
 let apikey;
 
 if (fs.existsSync(filepath)) {
@@ -25,7 +25,7 @@ function saveOpenAIResponses(userId, response) {
   // Specify the absolute path to the directory where you want to save the files
   const directoryPath = "./moderation/output"; // Replace with the actual path
   const filePath = path.join(directoryPath, `openai_responses_${userId}.txt`);
-
+  
   // Read the existing responses from the file
   let existingResponses = [];
   if (fs.existsSync(filePath)) {
@@ -124,25 +124,98 @@ for (let i = Math.max(fileLines.length - 3, 0); i < fileLines.length; i++) {
     // Fetch user's gender
     const senderGender = await getUserGender(senderName);
     //functions
-            if (senderBday) {
-            api.sendMessage(
-                {
-                    body: `Happy Birthday @${senderName}!`,
-                    mentions: [{ tag: `@${senderName}`, id: event.senderID }],
-                },
-                event.threadID
-            );
-        } else {
-            api.sendTypingIndicator(event.threadID);
-            api.sendMessage(
-                {
-                    body: `Hi @${senderName}! ${response.choices[0].message.content}`,
-                    mentions: [{ tag: `@${senderName}`, id: event.senderID }],
-                },
-                event.threadID,
-                event.messageID
-            );
-            }
+    if (response.choices[0].message.content.includes('[12345-')) {
+      
+        const nameMatch = response.choices[0].message.content.match(/\[12345-(.*?)\]/);
+        const extractedSongName = nameMatch ? nameMatch[1].replace('-', ' ') : '';
+        const origRespo = response.choices[0].message.content.replace(/\[[^:]*?\]/g, '');
+      require("./system/jsong.js")(api, event, extractedSongName);
+        api.sendTypingIndicator(event.threadID);
+        api.sendMessage(
+            {
+                body: `Hi @${senderName}! ${origRespo}`,
+                mentions: [{ tag: `@${senderName}`, id: event.senderID }],
+            },
+            event.threadID,
+            event.messageID
+        );
+    } else if (response.choices[0].message.content.includes('[6789-')) {
+      const waitPhrases = [
+        "Please wait",
+        "Hold on",
+        "Wait a second",
+        "Just a moment",
+        "Patience is a virtue",
+        "Hang tight",
+        "In a jiffy",
+        "Give me a moment",
+        "Be patient",
+        "Stay with me",
+        "Not long now",
+        "Just a sec",
+        "Hold your horses",
+        "One moment, please",
+        "Take a breather",
+        "Almost there",
+        "Bear with me",
+        "Chill out for a bit",
+        "I'm working on it",
+        "Just a tad longer",
+        "Hold tight",
+        "A short delay",
+        "Keep calm",
+        "I'll be quick",
+        "Just a tick",
+        "I appreciate your patience",
+        "Not much longer now",
+        "In a short while",
+        "Sit tight",
+        "Almost done",
+        "Just a pause",
+        "In the meantime",
+        "Hang in there",
+        "Just a whisper away",
+        "Hold onto your hat",
+        "I'm on it",
+        "A momentary pause",
+        "Stay put",
+        "I'm almost ready",
+        "In a flash",
+        "I'll be right back",
+        "Hold steady",
+        "I'm getting there",
+        "A quick intermission",
+        "I'm working hard",
+        "Just a flash"
+      ];
+
+      const randomWaitPhrase = waitPhrases[Math.floor(Math.random() * waitPhrases.length)];
+
+        const nameMatch = response.choices[0].message.content.match(/\[6789-(.*?)\]/);
+        const extractedImgName = nameMatch ? nameMatch[1].replace('-', ' ') : '';
+        const origRespo = response.choices[0].message.content.replace(/\[[^:]*?\]/g, '');
+      require("./system/jimg.js")(api, event, extractedImgName);
+        api.sendTypingIndicator(event.threadID);
+        api.sendMessage(
+            {
+                body: `Hi @${senderName}! ${randomWaitPhrase}`,
+                mentions: [{ tag: `@${senderName}`, id: event.senderID }],
+            },
+            event.threadID,
+            event.messageID
+        );
+    } else {
+        api.sendTypingIndicator(event.threadID);
+        api.sendMessage(
+            {
+                body: `Hi @${senderName}! ${response.choices[0].message.content}`,
+                mentions: [{ tag: `@${senderName}`, id: event.senderID }],
+            },
+            event.threadID,
+            event.messageID
+        );
+    }
+
   });
 }
 
