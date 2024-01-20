@@ -47,7 +47,7 @@ const imageSearch = async (api, event, extractedImgName) => {
       let url = image.url;
       if (!url.endsWith(".jpg") && !url.endsWith(".png")) continue;
 
-      let path = `./temp/search-image-${counter}.jpg`;
+      let path = `./temp/img/search-image-${counter}.jpg`;
       let hasError = false;
       await cloudscraper
         .get({ uri: url, encoding: null })

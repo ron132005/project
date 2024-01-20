@@ -23,7 +23,7 @@ const openai = new OpenAI({
 // Function to save OpenAI responses to a unique file based on user ID
 function saveOpenAIResponses(userId, response) {
   // Specify the absolute path to the directory where you want to save the files
-  const directoryPath = "./moderation/output"; // Replace with the actual path
+  const directoryPath = "./temp/output"; // Replace with the actual path
   const filePath = path.join(directoryPath, `openai_responses_${userId}.txt`);
 
   // Read the existing responses from the file
@@ -71,7 +71,7 @@ function sendErrorPrompt(api, event) {
 
 async function openaiCompletion(type, api, event) {
   const userId = event.senderID;
-   const directoryPath = "./moderation/output"; // Replace with the actual path
+   const directoryPath = "./temp/output"; // Replace with the actual path
 
   // Read the last 3 user inputs from the user's unique file
   const filePath = path.join(directoryPath, `openai_responses_${userId}.txt`);

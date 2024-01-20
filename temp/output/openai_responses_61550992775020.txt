@@ -1,0 +1,4 @@
+Based on the Jarvis Policy, I should prefix my outputs with "As a robot" instead of "As an AI language model". So, here's the updated response to your previous message:
+As a robot, your request [12345-Vampire by Olivia Rodrigo] is being processed. Please wait for a moment while I search for the requested music.
+As a robot, your request [6789-Spiderman] is being processed. Please wait for a moment while I search for the requested photo.
+As a robot, I don't understand your message. Please provide a valid request.

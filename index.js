@@ -6,6 +6,45 @@ const fs = require("fs");
 const login = require("fb-chat-api-temp");
 const { spawn } = require('child_process');
 
+
+const startTime = new Date();
+
+function formatUptime(uptime) {
+    const seconds = Math.floor(uptime % 60);
+    const minutes = Math.floor((uptime / 60) % 60);
+    const hours = Math.floor(uptime / 3600);
+    const days = Math.floor(uptime / 86400);
+
+    let uptimeString = '';
+
+    if (days > 0) {
+        uptimeString += `${days} ${days === 1 ? 'day' : 'days'}`;
+    }
+
+    if (hours > 0) {
+        uptimeString += ` ${hours} ${hours === 1 ? 'hour' : 'hours'}`;
+    }
+
+    if (minutes > 0 || uptimeString === '') {
+        uptimeString += ` ${minutes} ${minutes === 1 ? 'minute' : 'minutes'}`;
+    }
+
+    if (seconds > 0 || uptimeString === '') {
+        uptimeString += ` ${seconds} ${seconds === 1 ? 'second' : 'seconds'}`;
+    }
+
+    return uptimeString.trim();
+}
+
+function displayUptime(api, event) {
+    const currentTime = new Date();
+    const uptime = (currentTime - startTime) / 1000;
+        api.sendMessage(`🤖 Jarvis has been running for ${formatUptime(uptime)}!\n\nLooking for Virtual Private Server(VPS)?\n🤖 Message this account and we'll arrange your VPS`, event.threadID, event.messageID);
+}
+
+
+
+
 const loginCred = {
   appState: JSON.parse(fs.readFileSync("session.json", "utf-8")),
 };
@@ -23,7 +62,7 @@ function startListener(api, event) {
           }
           if (event.body.startsWith("•img")) {
             event.body = event.body.replace("•img", "");
-            require("./functions/imageSearch.js")(api, event);
+            require("./functions/img.js")(api, event);
           }
           //reaction triggers
           if (event.body.includes("ayie")) {
@@ -50,7 +89,7 @@ function startListener(api, event) {
           //forbidden jutsu 
           if (!event.body.toLowerCase().includes("•talk") && event.body.toLowerCase().includes("jarvis") || event.body.toLowerCase().includes("ultron")) {
 
-            require("./functions/customprompts.js")(api, event)
+            require("./functions/prompts.js")(api, event)
           }
 
           //summoning ai
@@ -91,9 +130,8 @@ function startListener(api, event) {
           }
 
           //meme
-       if (event.body.startsWith("•meme")) {
-            event.body = event.body.replace("•meme", "");
-            require("./functions/meme.js")(api, event);
+       if (event.body.startsWith("•uptime")) {
+            displayUptime(api, event);
 }
           
           if (event.body.toLowerCase().includes("•talk")) {
@@ -110,11 +148,15 @@ function startListener(api, event) {
           if(event.body.includes("•yts")) { 
     event.body =  event.body.replace("•yts", "");      require("./functions/yts.js")(api, event);
           }
+          
+          if (event.body.startsWith("•fact")) {
+              require("./functions/fact.js")(api, event);
+          }
 
           //trial0
 
-          if (event.body === "•//help") {
-            startMessage(api, event);
+          if (event.body === "•help") {
+         require("./functions/help.js")(api, event);
           } 
         } catch (error) {
           console.log(error);
@@ -130,12 +172,14 @@ function start() {
     }
     
     api.listenMqtt((err, event) => {
+        api.setOptions({listenEvents: true});
       if (err) {
         console.error("listen error:", err);
         return;
       }
-      
-      
+      console.log(event);
+      require("./moderation/antiunsend.js")(api, event);
+      require("./moderation/tt.js")(api, event);
       startListener(api, event);
     });
     //trial

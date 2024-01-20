@@ -28,7 +28,7 @@ const searchAndDownloadSong = async (songQuery) => {
   }
 
   const { videoId, title, author } = firstVideo;
-  const filePath = `./temp/${title.replace(/\s/g, "-")}.mp3`;
+  const filePath = `./temp/song/${title.replace(/\s/g, "-")}.mp3`;
 
   await downloadSong(videoId, filePath);
 

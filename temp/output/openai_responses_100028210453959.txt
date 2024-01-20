@@ -1,0 +1,5 @@
+Please wait, processing.
+To request a song, please include the name of the song in your message and add -[12345-<SONGNAME>]- at the very first line of your message. Please note that Jarvis will respond with "Please wait, processing." after receiving your request.
+-12345-Surrender-
+
+Please wait, processing.

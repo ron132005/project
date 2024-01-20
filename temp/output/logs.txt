@@ -1,0 +1,406 @@
+[
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVYf_X2NJEKtJhu1e",
+    "body": "pre"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVYgA2GNJEK0udehm",
+    "body": "gamit ko sa rapidapi, 200 requests per month"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVYgK_GNJEKyyGEv1",
+    "body": "kenlie"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVYgY0WNJELHnlPQe",
+    "body": "may shoti cmd yung bot mo?"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVYifhGNJENN6e6yd",
+    "body": "nakita kolang yan paps HAHA"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVYn6cmNJESuT8ZAT",
+    "body": "may count views ganon? tsaka number of ani"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVYoiU2NJETWFtDc6",
+    "body": "yung anong tawag don"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVYq1p2NJEVLN9heO",
+    "body": "fikfap"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVYq4J2NJEVuk7Eci",
+    "body": "Group has not allowed NSFW command. Contact group admins to enable NSFW command using 'nsfw' command."
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVYrWa2NJEVr_RF94",
+    "body": "ahhhhhhh"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVYr7GmNJEWQwDGFz",
+    "body": "nsfw on"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVYr_0mNJEW2NeZLz",
+    "body": "Sorry, only group admins can toggle NSFW settings."
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVYuQG2NJEY-YdToa",
+    "body": "pati nga avatar ng author nandon HAHA"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVYvrVGNJEaZlrOC9",
+    "body": "pati background music sa slideshow"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVY2SXGNJEhAt8k0w",
+    "body": "core"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVaHMK2NJFxhMfFAt",
+    "body": "video nothings gonna change my love for you"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVaKBNmNJF0WwKS0z",
+    "body": "video nothings gona change my love for you"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVaM20GNJF3KCF7mm",
+    "body": "video till my heartache ends"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVaOSTGNJF4n6od2j",
+    "body": "own youtube scraps :)"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVaOzYWNJF5JI6WR3",
+    "body": "buti na fix ko pa"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVaR7UmNJF8vPvd41",
+    "body": "Haup ayw ni release ni richard token getter api niya"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVaS0jWNJF9Vr3ims",
+    "body": "Di ko tuloy malabas yung web"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVaT8IWNJF-Rz0fiP",
+    "body": "fbgetinfo"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVaUVSGNJF-qzHLfD",
+    "body": "ahh nakalimutan ko"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVaVtkWNJGADOtvWq",
+    "body": "help 4"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVaWhZ2NJGA3NTXLN",
+    "body": "help 3"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVaYSs2NJGCngVqtu",
+    "body": "getfbinfo pala"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVaZ2JmNJGELuV0hn",
+    "body": "EAAD6V7 na proxied yan and EAAA proxied"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVauXEmNJGZNuKjpt",
+    "body": "noel gusto mo mag army na sana kita?"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVavf5WNJGaWlX8BF",
+    "body": "sisay iyan gusto?"
+  },
+  {
+    "messageID": "mid.$gABlEQsHdrkSTVa3vV2NJGieps4lo",
+    "body": "ai"
+  },
+  {
+    "messageID": "mid.$gABNZwsnTTdaTVcAflWNJHrTidnPf",
+    "body": "jarvis"
+  },
+  {
+    "messageID": "mid.$gABNZwsnTTdaTVcC2TmNJHtqT6aOp",
+    "body": "help"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVcGc02NJHxHsYivl",
+    "body": "Tara haha"
+  },
+  {
+    "messageID": "mid.$gABNZwsnTTdaTVcKCSWNJH02V4mgK",
+    "body": "walang command si jarvis"
+  },
+  {
+    "messageID": "mid.$gABNZwsnTTdaTVcM5qmNJH3sok67K",
+    "body": "•help"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVcStxGNJH9hsNXaD",
+    "body": "•uptime"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVcgUDmNJILKkvJhd",
+    "body": "chan man"
+  },
+  {
+    "messageID": "mid.$gABNZwsnTTdaTVchDgmNJIL3WaJRR",
+    "body": "•yts pom poko"
+  },
+  {
+    "messageID": "mid.$gABNZwsnTTdaTVcjl8GNJIOaWdGU0",
+    "body": "•yts porco rosso"
+  },
+  {
+    "messageID": "mid.$gABNZwsnTTdaTVckK4GNJIO-71UXh",
+    "body": "ron na kaya mo masunog or parecover nalang non tas ako na bahala maglinis tas delete non"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVcmoxmNJIRV3Wpgj",
+    "body": "Haha"
+  },
+  {
+    "messageID": "mid.$gABNZwsnTTdaTVcqIM2NJIU8HdcEZ",
+    "body": "diko pa magawa busy pa"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVc3BdGNJIh30vAmv",
+    "body": "ata matud kan may exam sa feb"
+  },
+  {
+    "messageID": "mid.$gABNZwsnTTdaTVc3gEmNJIiUEYKGC",
+    "body": "sige pagdi nalang busy"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVdOMBGNJI5CFLARf",
+    "body": "May ata"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVdPSqGNJI6Iw9-t3",
+    "body": "gaarug man sana nung sa marine"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVdQk_GNJI7a9fl6Q",
+    "body": "38k a month man"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVdR9oGNJI80XUi6a",
+    "body": "şahod mo habang naga skwela uda pa tuitions"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVdUS3WNJI_BRpPwM",
+    "body": "Tara exam kita"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVdU7MGNJI_m3Q4tV",
+    "body": "Diman ako naga joke"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVdWOEWNJJBFH3iCp",
+    "body": "MAY pa ata kadto"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVdW9jWNJJB0hd9lN",
+    "body": "para sinabi ko wana para mag desisyon na kamo"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVdcLRmNJJHCJh3zA",
+    "body": "arug man sana nung sa MARİNE na pinag exam namu nusad"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVdcfXmNJJHWUH1LX",
+    "body": "kan iba lang kadi ARMY"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVdemMmNJJJdGAa_T",
+    "body": "uda tuitions fee tapos mag şahıs kapa habang naga skwela tas pag graduate mo lieutenants kana"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVdhZJWNJJMGGsWmT",
+    "body": "Amo boi iriba kita"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVdnl0mNJJScxHoaY",
+    "body": "noel mag sabay ka saku"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVdonV2NJJTeRmIIT",
+    "body": "ako balah saymo bukong dika maga skwela"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVdru8mNJJWkJauX-",
+    "body": "❎ Unable to re-add member 黃翌深 to the group"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVdrxJmNJJWndfaHp",
+    "body": "𝖸𝗈𝗎 𝗍𝗁𝗂𝗇𝗄 翌深, 𝗒𝗈𝗎 𝖼𝖺𝗇 𝗅𝖾𝖺𝗏𝖾 𝗎𝗌 𝖺𝗅𝗅 𝗁𝖾𝗋𝖾 𝖺𝗅𝗈𝗇𝖾 𝗂 𝖺𝖽𝖽𝖾𝖽 𝗒𝗈𝗎 𝖻𝖺𝖼𝗄 𝗐𝖺𝗂𝗍𝗂𝗇𝗀 𝖿𝗈𝗋 𝖺𝖽𝗆𝗂𝗇𝗌 𝗍𝗈 𝖺𝖼𝖼𝖾𝗉𝗍 𝗒𝗈𝗎!!"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVdv6FmNJJayzsp7O",
+    "body": "Uno kan navy?"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVdxE52NJJb9q6y5O",
+    "body": "San kan eskwelan"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVd0GDGNJJe5wH0Cy",
+    "body": "•uptime"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVd2jjGNJJhacNeV9",
+    "body": "pwede man air force"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVd3ItWNJJiBXWKmS",
+    "body": "Aan man kan"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVd3SvGNJJiLVy1oD",
+    "body": "San*"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVd3jGWNJJiZ-vCTj",
+    "body": "secret"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVd31HWNJJir_dcfl",
+    "body": "wag kana hahaha"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVd4I6mNJJjBiQdLS",
+    "body": "Powtaaa HAHAHAH"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVd6R2mNJJlIjH-Re",
+    "body": "kami nalang"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVeIfrmNJJzWw6dZg",
+    "body": "HAHAHAH"
+  },
+  {
+    "messageID": "mid.$gABOEZhkhXymTVeOUDmNJJ4a_Uz5A",
+    "body": "kina naman @Rey Charlei  dakol patal wana HAHHA"
+  },
+  {
+    "messageID": "mid.$gABOEZhkhXymTVeOU32NJJ4nCZ7MO",
+    "body": "MImalas ako"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVfoEDmNJLS3jJfNt",
+    "body": "kakainis nasalihan ko sila na tinutulungan magrecover ng acc my gana pa sioa mangasar"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVf-AWWNJLo1YB0Mk",
+    "body": "-xvideos"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVf_rM2NJLqgrWNnX",
+    "body": "help"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVgAgbWNJLrV1DrnQ",
+    "body": "xvideos lexi lore"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVgAidmNJLrZYyng6",
+    "body": "Group has not allowed NSFW command. Contact group admins to enable NSFW command using 'nsfw' command."
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVgBaPmNJLsPy31Is",
+    "body": "nscw"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVgB082NJLsqc9ppR",
+    "body": "nsfw"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVgB25mNJLst0sXic",
+    "body": "Command usage is wrong. Use \"nsfw on\" or \"nsfw off\"."
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVgCj3GNJLtZc3sI6",
+    "body": "nsfw on"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVgCnUmNJLteTI1zP",
+    "body": "Sorry, only group admins can toggle NSFW settings."
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVgFgvGNJLwVaUoCs",
+    "body": "callad yow can you turn on the nsfw please i want to test the command xvideos ty"
+  },
+  {
+    "messageID": "mid.$gABOEZhkhXymTVgR4wGNJL8s8QBQG",
+    "body": "Amuhaha syng ani 1star nasna honor nakutahaha"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVgfKbmNJMJ-ZZbRu",
+    "body": "guys pahelp sa unsend"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVgh5bGNJMMu46HZV",
+    "body": "🇵🇭 Filipino language detected, you can change the language using  !language set group [language]\n\n🕒 Time: January 20, 2024, 10:46:27 AM"
+  },
+  {
+    "messageID": "mid.$gAFXWdmyZD_aTVg-VWWNJMpKySPj_",
+    "body": "☁️"
+  },
+  {
+    "messageID": "mid.$gAFXWdmyZD_aTVg-x2GNJMpnLy1wO",
+    "body": "."
+  },
+  {
+    "messageID": "mid.$gAFXWdmyZD_aTVg-5gWNJMptjwx8b",
+    "body": "/"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVhAcpWNJMrRtIBlG",
+    "body": "ez"
+  },
+  {
+    "messageID": "mid.$gABYQW9UvTEyTVhAxyWNJMrny7IUo",
+    "body": "Say kan"
+  },
+  {
+    "messageID": "mid.$gABWH4B4KqqOTVi1YlGNJOgMnJFDM",
+    "body": "jarvis"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVi2CjWNJOg2eTs3C",
+    "body": "•uptime"
+  },
+  {
+    "messageID": "mid.$gAFXWdmyZD_aTVkDVZ2NJPuP2zoyl",
+    "body": "Ai"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVlU8e2NJQ_4qCBQ5",
+    "body": "•talk who made you? use filler words and stutters to make it sound like a real human"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVmfYJmNJSKPb9A-e",
+    "body": "Prefix"
+  },
+  {
+    "messageID": "mid.$gABoRDSO9KKuTVm34R2NJSivCeEVH",
+    "body": "$"
+  },
+  {
+    "messageID": "mid.$gABlEQsHdrkSTVomIfmNJUQ_nEYsG",
+    "body": "ai"
+  },
+  {
+    "messageID": "mid.$gABlEQsHdrkSTVpwkVGNJVbiC4ira",
+    "body": "Ai"
+  }
+]

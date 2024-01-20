@@ -15,7 +15,7 @@ const removeArtistName = (songQuery) => {
 };
 
 const getSongDetails = async (song) => {
-  let options = {
+  const options = {
     page: 0,
     safe: false,
     additional_params: {
@@ -23,50 +23,63 @@ const getSongDetails = async (song) => {
     },
   };
 
-  let searchResults = await google.search(`${song} song lyrics`, options);
-  let knowledgePanel = searchResults.knowledge_panel;
-  let lyrics = knowledgePanel.lyrics || null;
-  let artist = knowledgePanel.type || "Unknown Artist";
+  try {
+    const searchResults = await google.search(`${song} song lyrics`, options);
+    const knowledgePanel = searchResults.knowledge_panel;
+    const lyrics = knowledgePanel.lyrics || null;
+    const artist = knowledgePanel.type || "Unknown Artist";
 
-  return {
-    artist,
-    lyrics,
-  };
+    return {
+      artist,
+      lyrics,
+    };
+  } catch (error) {
+    console.error('Error fetching song details:', error);
+    return {
+      artist: "Unknown Artist",
+      lyrics: null,
+    };
+  }
 };
 
 module.exports = async (api, event) => {
-  let songQuery = event.body;
+  try {
+    const songQuery = event.body;
 
-  if (!songQuery) {
-    api.sendMessage(
-      "⚠️ Please enter your query.",
-      event.threadID,
-      event.messageID
-    );
-    return;
+    if (!songQuery) {
+      api.sendMessage(
+        "⚠️ Please enter your query.",
+        event.threadID,
+        event.messageID
+      );
+      return;
+    }
+
+    const song = removeSymbols(songQuery.trim());
+    const songCapitalized = capitalizeFirstLetter(song);
+
+    const songDetails = await getSongDetails(song);
+    const artist = songDetails.artist;
+    const lyrics = songDetails.lyrics;
+
+    if (!lyrics) {
+      api.sendMessage(
+        "🔁 𝗟𝘆𝗿𝗶𝗰𝘀 𝗻𝗼𝘁 𝗳𝗼𝘂𝗻𝗱.",
+        event.threadID,
+        event.messageID
+      );
+      return;
+    }
+
+    const artistCapitalized = capitalizeFirstLetter(artist);
+
+    const songWithoutArtist = removeArtistName(songCapitalized);
+
+    const message = `🎵 𝗦𝗼𝗻𝗴: ${songWithoutArtist}\n\n${lyrics}`;
+
+    api.sendMessage(message, event.threadID, event.messageID);
+  } catch (error) {
+    console.error('Error processing song request:', error);
+    api.sendMessage("❌ An error occurred while processing your request.", event.threadID, event.messageID);
   }
-
-  let song = removeSymbols(songQuery.trim());
-  let songCapitalized = capitalizeFirstLetter(song);
-
-  let songDetails = await getSongDetails(song);
-  let artist = songDetails.artist;
-  let lyrics = songDetails.lyrics;
-
-  if (!lyrics) {
-    api.sendMessage(
-      "🔁 𝗟𝘆𝗿𝗶𝗰𝘀 𝗻𝗼𝘁 𝗳𝗼𝘂𝗻𝗱.",
-      event.threadID,
-      event.messageID
-    );
-    return;
-  }
-
-  let artistCapitalized = capitalizeFirstLetter(artist);
-
-  let songWithoutArtist = removeArtistName(songCapitalized);
-
-  let message = `🎵 𝗦𝗼𝗻𝗴: ${songWithoutArtist}\n\n${lyrics}`;
-
-  api.sendMessage(message, event.threadID, event.messageID);
 };
