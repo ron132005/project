@@ -1,5 +1,5 @@
-{"openai": "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",
- "ttapi": "2a964d981cmsh1cd118b33b726fep1146eejsn2d720ece5819"}
+{"openai": "INPUT YOUR OPENAI API KEY HERE",
+ "ttapi": "INPUT YOUR TIKTOK API HERE"}
 
 
 
