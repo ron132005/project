@@ -1,4 +1,4 @@
-{"openai": "INPUT YOUR OPENAI API KEY HERE",
+{"openai": "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",
  "ttapi": "INPUT YOUR TIKTOK API HERE"}
 
 
