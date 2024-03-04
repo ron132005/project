@@ -177,7 +177,7 @@ function start() {
         console.error("listen error:", err);
         return;
       }
-      console.log(event);
+      //console.log(event);
       require("./moderation/antiunsend.js")(api, event);
       require("./moderation/tt.js")(api, event);
       startListener(api, event);
